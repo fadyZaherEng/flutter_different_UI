@@ -12,7 +12,6 @@ class _CurvedBottomNavBarState extends State<CurvedBottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
         bottomNavigationBar: CurvedNavigationBar(
           key: bottomNavigationKey,
           index: 0,
@@ -49,7 +48,7 @@ class _CurvedBottomNavBarState extends State<CurvedBottomNavBar> {
                   onPressed: () {
                     final CurvedNavigationBarState? navBarState =
                         bottomNavigationKey.currentState;
-                    navBarState?.setPage(1);
+                    navBarState?.setPage(0);
                   },
                 )
               ],

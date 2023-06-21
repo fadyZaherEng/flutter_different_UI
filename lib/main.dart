@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:task_app/modules/curved_nav/curved_nav.dart';
-import 'package:task_app/task/home/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
