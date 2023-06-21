@@ -42,7 +42,7 @@ dependencies:
   avatar_glow: ^2.0.2
   read_more_text: ^0.0.5
   lottie: ^2.2.0
-
+  curved_navigation_bar: ^1.0.3
 
 dev_dependencies:
   flutter_test:
