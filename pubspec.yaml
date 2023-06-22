@@ -43,6 +43,7 @@ dependencies:
   read_more_text: ^0.0.5
   lottie: ^2.2.0
   curved_navigation_bar: ^1.0.3
+  shimmer: ^3.0.0
 
 dev_dependencies:
   flutter_test:

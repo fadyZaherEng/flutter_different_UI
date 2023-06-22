@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_app/modules/curved_nav/curved_nav.dart';
+import 'package:task_app/modules/shimmer/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.blueAccent,
         primarySwatch:Colors.blue,
       ),
-      home: const CurvedBottomNavBar(),
+      home: HomeScreenShimmer(),
     );
   }
 }
