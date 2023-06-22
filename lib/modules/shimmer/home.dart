@@ -23,7 +23,7 @@ class _HomeScreenShimmerState extends State<HomeScreenShimmer> {
 
           });
         },
-        child: const Icon(Icons.refresh_outlined),
+       child: const Icon(Icons.refresh_outlined),
       ),
     );
   }
