@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.blueAccent,
         primarySwatch:Colors.blue,
       ),
-      home: ParallaxWidget(),
+      home: ButtonRotateOnBoardingScreen(),
     );
   }
 }
