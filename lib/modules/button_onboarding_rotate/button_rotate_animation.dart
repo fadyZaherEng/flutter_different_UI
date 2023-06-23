@@ -16,7 +16,7 @@ class _ButtonRotateOnBoardingScreenState extends State<ButtonRotateOnBoardingScr
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer.periodic(Duration(seconds: 1), (timer) {
+    Timer.periodic(const Duration(seconds: 1), (timer) {
       ops=Random().nextDouble();
       print("OPSSS $ops");
       setState(() {
@@ -30,11 +30,14 @@ class _ButtonRotateOnBoardingScreenState extends State<ButtonRotateOnBoardingScr
       floatingActionButton: Stack(
         alignment: Alignment.center,
         children: [
-          Opacity(
-            opacity:ops ,
-            child: const CircleAvatar(
-              radius: 35,
-              backgroundColor: Colors.red,
+          Transform.rotate(
+            angle: 360,
+            child: Opacity(
+              opacity:ops ,
+              child: const CircleAvatar(
+                radius: 35,
+                backgroundColor: Colors.red,
+              ),
             ),
           ),
           const CircleAvatar(
