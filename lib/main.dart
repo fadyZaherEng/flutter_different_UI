@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_app/modules/expensioal_panel_list/panel_list.dart';
+import 'package:task_app/modules/facebook_story/story.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.blueAccent,
         primarySwatch:Colors.blue,
       ),
-      home: const ExpensioalPanelListScreen(),
+      home: FacebookStoriesScreen(),
     );
   }
 }

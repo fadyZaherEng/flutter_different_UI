@@ -13,6 +13,8 @@ class _ReactionScreenState extends State<ReactionScreen>
     with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
 
+  int currentIdx=0;
+
   @override
   void initState() {
     super.initState();
@@ -67,16 +69,67 @@ class _ReactionScreenState extends State<ReactionScreen>
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 for (int i = 0; i < emojis.length; i++)
-                  Transform.scale(
-                    scale: emojis[i].scale +
-                        (curretHoveredEmoji == i ? 0.7 : 0),
-                    child: Lottie.asset(
-                      emojis[i].path,
-                      controller:
-                          curretHoveredEmoji == i ? _controller : null,
-                      height: 45,
-                      animate: false,
-                      fit: BoxFit.cover,
+                  InkWell(
+                    onTapCancel: (){
+                      currentIdx=i;
+                      print("onTapCancel $i");
+                    },
+                    onFocusChange: (idx){
+                      currentIdx=i;
+                      print("onFocusChange $idx");
+                    },
+                    onTap: (){
+                      currentIdx=i;
+                      print("onTap $i");
+                    },
+                    onSecondaryTapCancel: (){
+                      currentIdx=i;
+                      print("onSecondaryTapCancel $i");
+                    },
+                    onSecondaryTap: (){
+                      currentIdx=i;
+                      print("onSecondaryTap $i");
+                    },
+                    onTapUp: (TapUpDetails onTap){
+                     // onTap.globalPosition
+                      currentIdx=i;
+                      print("onTapUp $i");
+                    },
+                    onLongPress: (){
+                      currentIdx=i;
+                      print("onLongPress $i");
+                    },
+                    onTapDown: (tap){
+                      currentIdx=i;
+                      print("onTapDown $i");
+                    },
+                    onSecondaryTapDown: (tap){
+                      currentIdx=i;
+                      print("onSecondaryTapDown $i");
+                    },
+                    onSecondaryTapUp: (tap){
+                      currentIdx=i;
+                      print("onSecondaryTapUp $i");
+                    },
+                    onDoubleTap: (){
+                      currentIdx=i;
+                      print("onDoubleTap $i");
+                    },
+                    onHighlightChanged: (x){
+                      currentIdx=i;
+                      print("onHighlightChanged $i");
+                    },
+                    child: Transform.scale(
+                      scale: emojis[i].scale +
+                          (curretHoveredEmoji == i ? 0.7 : 0),
+                      child: Lottie.asset(
+                        emojis[i].path,
+                        controller:
+                            curretHoveredEmoji == i ? _controller : null,
+                        height: 45,
+                        animate: false,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   )
               ],
