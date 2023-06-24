@@ -9,46 +9,16 @@ class StaggeredGridViewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: StaggeredGrid.count(
-        crossAxisCount: 4,
-        mainAxisSpacing: 2,
-        crossAxisSpacing: 2,
-        axisDirection: AxisDirection.down,
-        children: [
-          StaggeredGridTile.count(
-            crossAxisCellCount: 2,
-            mainAxisCellCount: 2,
-            child: Container(
-              padding: const EdgeInsets.all(5),
-              margin: const EdgeInsets.all(5),
-              color: Color.fromRGBO(Random().nextInt(355),
-                  Random().nextInt(355), Random().nextInt(355), 1),
-              child: Card(
-                color: Color.fromRGBO(Random().nextInt(355),
-                    Random().nextInt(355), Random().nextInt(355), 1),
-                child: const Center(child: Text("0")),
-              ),
-            ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 2,
-            mainAxisCellCount: 1,
-            child: Container(
-              padding: const EdgeInsets.all(5),
-              margin: const EdgeInsets.all(5),
-              color: Color.fromRGBO(Random().nextInt(355),
-                  Random().nextInt(355), Random().nextInt(355), 1),
-              child: Card(
-                color: Color.fromRGBO(Random().nextInt(355),
-                    Random().nextInt(355), Random().nextInt(355), 1),
-                child: const Center(child: Text("1")),
-              ),
-            ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 1,
-            mainAxisCellCount: 1,
-            child: Center(
+      body: SingleChildScrollView(
+        child: StaggeredGrid.count(
+          crossAxisCount: 4,
+          mainAxisSpacing: 2,
+          crossAxisSpacing: 2,
+          axisDirection: AxisDirection.down,
+          children: [
+            StaggeredGridTile.count(
+              crossAxisCellCount: 2,
+              mainAxisCellCount: 2,
               child: Container(
                 padding: const EdgeInsets.all(5),
                 margin: const EdgeInsets.all(5),
@@ -57,15 +27,13 @@ class StaggeredGridViewScreen extends StatelessWidget {
                 child: Card(
                   color: Color.fromRGBO(Random().nextInt(355),
                       Random().nextInt(355), Random().nextInt(355), 1),
-                  child: const Center(child: Text("2")),
+                  child: const Center(child: Text("0")),
                 ),
               ),
             ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 1,
-            mainAxisCellCount: 1,
-            child: Center(
+            StaggeredGridTile.count(
+              crossAxisCellCount: 2,
+              mainAxisCellCount: 1,
               child: Container(
                 padding: const EdgeInsets.all(5),
                 margin: const EdgeInsets.all(5),
@@ -74,15 +42,64 @@ class StaggeredGridViewScreen extends StatelessWidget {
                 child: Card(
                   color: Color.fromRGBO(Random().nextInt(355),
                       Random().nextInt(355), Random().nextInt(355), 1),
-                  child: const Center(child: Text("3")),
+                  child: const Center(child: Text("1")),
                 ),
               ),
             ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 4,
-            mainAxisCellCount: 2,
-            child: Center(
+            StaggeredGridTile.count(
+              crossAxisCellCount: 1,
+              mainAxisCellCount: 1,
+              child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
+                  color: Color.fromRGBO(Random().nextInt(355),
+                      Random().nextInt(355), Random().nextInt(355), 1),
+                  child: Card(
+                    color: Color.fromRGBO(Random().nextInt(355),
+                        Random().nextInt(355), Random().nextInt(355), 1),
+                    child: const Center(child: Text("2")),
+                  ),
+                ),
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 1,
+              mainAxisCellCount: 1,
+              child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
+                  color: Color.fromRGBO(Random().nextInt(355),
+                      Random().nextInt(355), Random().nextInt(355), 1),
+                  child: Card(
+                    color: Color.fromRGBO(Random().nextInt(355),
+                        Random().nextInt(355), Random().nextInt(355), 1),
+                    child: const Center(child: Text("3")),
+                  ),
+                ),
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 4,
+              mainAxisCellCount: 2,
+              child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
+                  color: Color.fromRGBO(Random().nextInt(355),
+                      Random().nextInt(355), Random().nextInt(355), 1),
+                  child: Card(
+                    color: Color.fromRGBO(Random().nextInt(355),
+                        Random().nextInt(355), Random().nextInt(355), 1),
+                    child: const Center(child: Text("4")),
+                  ),
+                ),
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 2,
+              mainAxisCellCount: 2,
               child: Container(
                 padding: const EdgeInsets.all(5),
                 margin: const EdgeInsets.all(5),
@@ -91,45 +108,13 @@ class StaggeredGridViewScreen extends StatelessWidget {
                 child: Card(
                   color: Color.fromRGBO(Random().nextInt(355),
                       Random().nextInt(355), Random().nextInt(355), 1),
-                  child: const Center(child: Text("4")),
+                  child: const Center(child: Text("0")),
                 ),
               ),
             ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 2,
-            mainAxisCellCount: 2,
-            child: Container(
-              padding: const EdgeInsets.all(5),
-              margin: const EdgeInsets.all(5),
-              color: Color.fromRGBO(Random().nextInt(355),
-                  Random().nextInt(355), Random().nextInt(355), 1),
-              child: Card(
-                color: Color.fromRGBO(Random().nextInt(355),
-                    Random().nextInt(355), Random().nextInt(355), 1),
-                child: const Center(child: Text("0")),
-              ),
-            ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 2,
-            mainAxisCellCount: 1,
-            child: Container(
-              padding: const EdgeInsets.all(5),
-              margin: const EdgeInsets.all(5),
-              color: Color.fromRGBO(Random().nextInt(355),
-                  Random().nextInt(355), Random().nextInt(355), 1),
-              child: Card(
-                color: Color.fromRGBO(Random().nextInt(355),
-                    Random().nextInt(355), Random().nextInt(355), 1),
-                child: const Center(child: Text("1")),
-              ),
-            ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 1,
-            mainAxisCellCount: 1,
-            child: Center(
+            StaggeredGridTile.count(
+              crossAxisCellCount: 2,
+              mainAxisCellCount: 1,
               child: Container(
                 padding: const EdgeInsets.all(5),
                 margin: const EdgeInsets.all(5),
@@ -138,15 +123,64 @@ class StaggeredGridViewScreen extends StatelessWidget {
                 child: Card(
                   color: Color.fromRGBO(Random().nextInt(355),
                       Random().nextInt(355), Random().nextInt(355), 1),
-                  child: const Center(child: Text("2")),
+                  child: const Center(child: Text("1")),
                 ),
               ),
             ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 1,
-            mainAxisCellCount: 1,
-            child: Center(
+            StaggeredGridTile.count(
+              crossAxisCellCount: 1,
+              mainAxisCellCount: 1,
+              child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
+                  color: Color.fromRGBO(Random().nextInt(355),
+                      Random().nextInt(355), Random().nextInt(355), 1),
+                  child: Card(
+                    color: Color.fromRGBO(Random().nextInt(355),
+                        Random().nextInt(355), Random().nextInt(355), 1),
+                    child: const Center(child: Text("2")),
+                  ),
+                ),
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 1,
+              mainAxisCellCount: 1,
+              child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
+                  color: Color.fromRGBO(Random().nextInt(355),
+                      Random().nextInt(355), Random().nextInt(355), 1),
+                  child: Card(
+                    color: Color.fromRGBO(Random().nextInt(355),
+                        Random().nextInt(355), Random().nextInt(355), 1),
+                    child: const Center(child: Text("3")),
+                  ),
+                ),
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 4,
+              mainAxisCellCount: 2,
+              child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
+                  color: Color.fromRGBO(Random().nextInt(355),
+                      Random().nextInt(355), Random().nextInt(355), 1),
+                  child: Card(
+                    color: Color.fromRGBO(Random().nextInt(355),
+                        Random().nextInt(355), Random().nextInt(355), 1),
+                    child: const Center(child: Text("4")),
+                  ),
+                ),
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 2,
+              mainAxisCellCount: 2,
               child: Container(
                 padding: const EdgeInsets.all(5),
                 margin: const EdgeInsets.all(5),
@@ -155,15 +189,13 @@ class StaggeredGridViewScreen extends StatelessWidget {
                 child: Card(
                   color: Color.fromRGBO(Random().nextInt(355),
                       Random().nextInt(355), Random().nextInt(355), 1),
-                  child: const Center(child: Text("3")),
+                  child: const Center(child: Text("0")),
                 ),
               ),
             ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 4,
-            mainAxisCellCount: 2,
-            child: Center(
+            StaggeredGridTile.count(
+              crossAxisCellCount: 2,
+              mainAxisCellCount: 1,
               child: Container(
                 padding: const EdgeInsets.all(5),
                 margin: const EdgeInsets.all(5),
@@ -172,45 +204,64 @@ class StaggeredGridViewScreen extends StatelessWidget {
                 child: Card(
                   color: Color.fromRGBO(Random().nextInt(355),
                       Random().nextInt(355), Random().nextInt(355), 1),
-                  child: const Center(child: Text("4")),
+                  child: const Center(child: Text("1")),
                 ),
               ),
             ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 2,
-            mainAxisCellCount: 2,
-            child: Container(
-              padding: const EdgeInsets.all(5),
-              margin: const EdgeInsets.all(5),
-              color: Color.fromRGBO(Random().nextInt(355),
-                  Random().nextInt(355), Random().nextInt(355), 1),
-              child: Card(
-                color: Color.fromRGBO(Random().nextInt(355),
-                    Random().nextInt(355), Random().nextInt(355), 1),
-                child: const Center(child: Text("0")),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 1,
+              mainAxisCellCount: 1,
+              child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
+                  color: Color.fromRGBO(Random().nextInt(355),
+                      Random().nextInt(355), Random().nextInt(355), 1),
+                  child: Card(
+                    color: Color.fromRGBO(Random().nextInt(355),
+                        Random().nextInt(355), Random().nextInt(355), 1),
+                    child: const Center(child: Text("2")),
+                  ),
+                ),
               ),
             ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 2,
-            mainAxisCellCount: 1,
-            child: Container(
-              padding: const EdgeInsets.all(5),
-              margin: const EdgeInsets.all(5),
-              color: Color.fromRGBO(Random().nextInt(355),
-                  Random().nextInt(355), Random().nextInt(355), 1),
-              child: Card(
-                color: Color.fromRGBO(Random().nextInt(355),
-                    Random().nextInt(355), Random().nextInt(355), 1),
-                child: const Center(child: Text("1")),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 1,
+              mainAxisCellCount: 1,
+              child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
+                  color: Color.fromRGBO(Random().nextInt(355),
+                      Random().nextInt(355), Random().nextInt(355), 1),
+                  child: Card(
+                    color: Color.fromRGBO(Random().nextInt(355),
+                        Random().nextInt(355), Random().nextInt(355), 1),
+                    child: const Center(child: Text("3")),
+                  ),
+                ),
               ),
             ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 1,
-            mainAxisCellCount: 1,
-            child: Center(
+            StaggeredGridTile.count(
+              crossAxisCellCount: 4,
+              mainAxisCellCount: 2,
+              child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
+                  color: Color.fromRGBO(Random().nextInt(355),
+                      Random().nextInt(355), Random().nextInt(355), 1),
+                  child: Card(
+                    color: Color.fromRGBO(Random().nextInt(355),
+                        Random().nextInt(355), Random().nextInt(355), 1),
+                    child: const Center(child: Text("4")),
+                  ),
+                ),
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 2,
+              mainAxisCellCount: 2,
               child: Container(
                 padding: const EdgeInsets.all(5),
                 margin: const EdgeInsets.all(5),
@@ -219,15 +270,13 @@ class StaggeredGridViewScreen extends StatelessWidget {
                 child: Card(
                   color: Color.fromRGBO(Random().nextInt(355),
                       Random().nextInt(355), Random().nextInt(355), 1),
-                  child: const Center(child: Text("2")),
+                  child: const Center(child: Text("0")),
                 ),
               ),
             ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 1,
-            mainAxisCellCount: 1,
-            child: Center(
+            StaggeredGridTile.count(
+              crossAxisCellCount: 2,
+              mainAxisCellCount: 1,
               child: Container(
                 padding: const EdgeInsets.all(5),
                 margin: const EdgeInsets.all(5),
@@ -236,15 +285,64 @@ class StaggeredGridViewScreen extends StatelessWidget {
                 child: Card(
                   color: Color.fromRGBO(Random().nextInt(355),
                       Random().nextInt(355), Random().nextInt(355), 1),
-                  child: const Center(child: Text("3")),
+                  child: const Center(child: Text("1")),
                 ),
               ),
             ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 4,
-            mainAxisCellCount: 2,
-            child: Center(
+            StaggeredGridTile.count(
+              crossAxisCellCount: 1,
+              mainAxisCellCount: 1,
+              child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
+                  color: Color.fromRGBO(Random().nextInt(355),
+                      Random().nextInt(355), Random().nextInt(355), 1),
+                  child: Card(
+                    color: Color.fromRGBO(Random().nextInt(355),
+                        Random().nextInt(355), Random().nextInt(355), 1),
+                    child: const Center(child: Text("2")),
+                  ),
+                ),
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 1,
+              mainAxisCellCount: 1,
+              child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
+                  color: Color.fromRGBO(Random().nextInt(355),
+                      Random().nextInt(355), Random().nextInt(355), 1),
+                  child: Card(
+                    color: Color.fromRGBO(Random().nextInt(355),
+                        Random().nextInt(355), Random().nextInt(355), 1),
+                    child: const Center(child: Text("3")),
+                  ),
+                ),
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 4,
+              mainAxisCellCount: 2,
+              child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
+                  color: Color.fromRGBO(Random().nextInt(355),
+                      Random().nextInt(355), Random().nextInt(355), 1),
+                  child: Card(
+                    color: Color.fromRGBO(Random().nextInt(355),
+                        Random().nextInt(355), Random().nextInt(355), 1),
+                    child: const Center(child: Text("4")),
+                  ),
+                ),
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 2,
+              mainAxisCellCount: 2,
               child: Container(
                 padding: const EdgeInsets.all(5),
                 margin: const EdgeInsets.all(5),
@@ -253,45 +351,13 @@ class StaggeredGridViewScreen extends StatelessWidget {
                 child: Card(
                   color: Color.fromRGBO(Random().nextInt(355),
                       Random().nextInt(355), Random().nextInt(355), 1),
-                  child: const Center(child: Text("4")),
+                  child: const Center(child: Text("0")),
                 ),
               ),
             ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 2,
-            mainAxisCellCount: 2,
-            child: Container(
-              padding: const EdgeInsets.all(5),
-              margin: const EdgeInsets.all(5),
-              color: Color.fromRGBO(Random().nextInt(355),
-                  Random().nextInt(355), Random().nextInt(355), 1),
-              child: Card(
-                color: Color.fromRGBO(Random().nextInt(355),
-                    Random().nextInt(355), Random().nextInt(355), 1),
-                child: const Center(child: Text("0")),
-              ),
-            ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 2,
-            mainAxisCellCount: 1,
-            child: Container(
-              padding: const EdgeInsets.all(5),
-              margin: const EdgeInsets.all(5),
-              color: Color.fromRGBO(Random().nextInt(355),
-                  Random().nextInt(355), Random().nextInt(355), 1),
-              child: Card(
-                color: Color.fromRGBO(Random().nextInt(355),
-                    Random().nextInt(355), Random().nextInt(355), 1),
-                child: const Center(child: Text("1")),
-              ),
-            ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 1,
-            mainAxisCellCount: 1,
-            child: Center(
+            StaggeredGridTile.count(
+              crossAxisCellCount: 2,
+              mainAxisCellCount: 1,
               child: Container(
                 padding: const EdgeInsets.all(5),
                 margin: const EdgeInsets.all(5),
@@ -300,15 +366,64 @@ class StaggeredGridViewScreen extends StatelessWidget {
                 child: Card(
                   color: Color.fromRGBO(Random().nextInt(355),
                       Random().nextInt(355), Random().nextInt(355), 1),
-                  child: const Center(child: Text("2")),
+                  child: const Center(child: Text("1")),
                 ),
               ),
             ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 1,
-            mainAxisCellCount: 1,
-            child: Center(
+            StaggeredGridTile.count(
+              crossAxisCellCount: 1,
+              mainAxisCellCount: 1,
+              child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
+                  color: Color.fromRGBO(Random().nextInt(355),
+                      Random().nextInt(355), Random().nextInt(355), 1),
+                  child: Card(
+                    color: Color.fromRGBO(Random().nextInt(355),
+                        Random().nextInt(355), Random().nextInt(355), 1),
+                    child: const Center(child: Text("2")),
+                  ),
+                ),
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 1,
+              mainAxisCellCount: 1,
+              child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
+                  color: Color.fromRGBO(Random().nextInt(355),
+                      Random().nextInt(355), Random().nextInt(355), 1),
+                  child: Card(
+                    color: Color.fromRGBO(Random().nextInt(355),
+                        Random().nextInt(355), Random().nextInt(355), 1),
+                    child: const Center(child: Text("3")),
+                  ),
+                ),
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 4,
+              mainAxisCellCount: 2,
+              child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
+                  color: Color.fromRGBO(Random().nextInt(355),
+                      Random().nextInt(355), Random().nextInt(355), 1),
+                  child: Card(
+                    color: Color.fromRGBO(Random().nextInt(355),
+                        Random().nextInt(355), Random().nextInt(355), 1),
+                    child: const Center(child: Text("4")),
+                  ),
+                ),
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 2,
+              mainAxisCellCount: 2,
               child: Container(
                 padding: const EdgeInsets.all(5),
                 margin: const EdgeInsets.all(5),
@@ -317,15 +432,13 @@ class StaggeredGridViewScreen extends StatelessWidget {
                 child: Card(
                   color: Color.fromRGBO(Random().nextInt(355),
                       Random().nextInt(355), Random().nextInt(355), 1),
-                  child: const Center(child: Text("3")),
+                  child: const Center(child: Text("0")),
                 ),
               ),
             ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 4,
-            mainAxisCellCount: 2,
-            child: Center(
+            StaggeredGridTile.count(
+              crossAxisCellCount: 2,
+              mainAxisCellCount: 1,
               child: Container(
                 padding: const EdgeInsets.all(5),
                 margin: const EdgeInsets.all(5),
@@ -334,174 +447,63 @@ class StaggeredGridViewScreen extends StatelessWidget {
                 child: Card(
                   color: Color.fromRGBO(Random().nextInt(355),
                       Random().nextInt(355), Random().nextInt(355), 1),
-                  child: const Center(child: Text("4")),
+                  child: const Center(child: Text("1")),
                 ),
               ),
             ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 2,
-            mainAxisCellCount: 2,
-            child: Container(
-              padding: const EdgeInsets.all(5),
-              margin: const EdgeInsets.all(5),
-              color: Color.fromRGBO(Random().nextInt(355),
-                  Random().nextInt(355), Random().nextInt(355), 1),
-              child: Card(
-                color: Color.fromRGBO(Random().nextInt(355),
-                    Random().nextInt(355), Random().nextInt(355), 1),
-                child: const Center(child: Text("0")),
-              ),
-            ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 2,
-            mainAxisCellCount: 1,
-            child: Container(
-              padding: const EdgeInsets.all(5),
-              margin: const EdgeInsets.all(5),
-              color: Color.fromRGBO(Random().nextInt(355),
-                  Random().nextInt(355), Random().nextInt(355), 1),
-              child: Card(
-                color: Color.fromRGBO(Random().nextInt(355),
-                    Random().nextInt(355), Random().nextInt(355), 1),
-                child: const Center(child: Text("1")),
-              ),
-            ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 1,
-            mainAxisCellCount: 1,
-            child: Center(
-              child: Container(
-                padding: const EdgeInsets.all(5),
-                margin: const EdgeInsets.all(5),
-                color: Color.fromRGBO(Random().nextInt(355),
-                    Random().nextInt(355), Random().nextInt(355), 1),
-                child: Card(
+            StaggeredGridTile.count(
+              crossAxisCellCount: 1,
+              mainAxisCellCount: 1,
+              child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
                   color: Color.fromRGBO(Random().nextInt(355),
                       Random().nextInt(355), Random().nextInt(355), 1),
-                  child: const Center(child: Text("2")),
+                  child: Card(
+                    color: Color.fromRGBO(Random().nextInt(355),
+                        Random().nextInt(355), Random().nextInt(355), 1),
+                    child: const Center(child: Text("2")),
+                  ),
                 ),
               ),
             ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 1,
-            mainAxisCellCount: 1,
-            child: Center(
-              child: Container(
-                padding: const EdgeInsets.all(5),
-                margin: const EdgeInsets.all(5),
-                color: Color.fromRGBO(Random().nextInt(355),
-                    Random().nextInt(355), Random().nextInt(355), 1),
-                child: Card(
+            StaggeredGridTile.count(
+              crossAxisCellCount: 1,
+              mainAxisCellCount: 1,
+              child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
                   color: Color.fromRGBO(Random().nextInt(355),
                       Random().nextInt(355), Random().nextInt(355), 1),
-                  child: const Center(child: Text("3")),
+                  child: Card(
+                    color: Color.fromRGBO(Random().nextInt(355),
+                        Random().nextInt(355), Random().nextInt(355), 1),
+                    child: const Center(child: Text("3")),
+                  ),
                 ),
               ),
             ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 4,
-            mainAxisCellCount: 2,
-            child: Center(
-              child: Container(
-                padding: const EdgeInsets.all(5),
-                margin: const EdgeInsets.all(5),
-                color: Color.fromRGBO(Random().nextInt(355),
-                    Random().nextInt(355), Random().nextInt(355), 1),
-                child: Card(
+            StaggeredGridTile.count(
+              crossAxisCellCount: 4,
+              mainAxisCellCount: 2,
+              child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
                   color: Color.fromRGBO(Random().nextInt(355),
                       Random().nextInt(355), Random().nextInt(355), 1),
-                  child: const Center(child: Text("4")),
+                  child: Card(
+                    color: Color.fromRGBO(Random().nextInt(355),
+                        Random().nextInt(355), Random().nextInt(355), 1),
+                    child: const Center(child: Text("4")),
+                  ),
                 ),
               ),
             ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 2,
-            mainAxisCellCount: 2,
-            child: Container(
-              padding: const EdgeInsets.all(5),
-              margin: const EdgeInsets.all(5),
-              color: Color.fromRGBO(Random().nextInt(355),
-                  Random().nextInt(355), Random().nextInt(355), 1),
-              child: Card(
-                color: Color.fromRGBO(Random().nextInt(355),
-                    Random().nextInt(355), Random().nextInt(355), 1),
-                child: const Center(child: Text("0")),
-              ),
-            ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 2,
-            mainAxisCellCount: 1,
-            child: Container(
-              padding: const EdgeInsets.all(5),
-              margin: const EdgeInsets.all(5),
-              color: Color.fromRGBO(Random().nextInt(355),
-                  Random().nextInt(355), Random().nextInt(355), 1),
-              child: Card(
-                color: Color.fromRGBO(Random().nextInt(355),
-                    Random().nextInt(355), Random().nextInt(355), 1),
-                child: const Center(child: Text("1")),
-              ),
-            ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 1,
-            mainAxisCellCount: 1,
-            child: Center(
-              child: Container(
-                padding: const EdgeInsets.all(5),
-                margin: const EdgeInsets.all(5),
-                color: Color.fromRGBO(Random().nextInt(355),
-                    Random().nextInt(355), Random().nextInt(355), 1),
-                child: Card(
-                  color: Color.fromRGBO(Random().nextInt(355),
-                      Random().nextInt(355), Random().nextInt(355), 1),
-                  child: const Center(child: Text("2")),
-                ),
-              ),
-            ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 1,
-            mainAxisCellCount: 1,
-            child: Center(
-              child: Container(
-                padding: const EdgeInsets.all(5),
-                margin: const EdgeInsets.all(5),
-                color: Color.fromRGBO(Random().nextInt(355),
-                    Random().nextInt(355), Random().nextInt(355), 1),
-                child: Card(
-                  color: Color.fromRGBO(Random().nextInt(355),
-                      Random().nextInt(355), Random().nextInt(355), 1),
-                  child: const Center(child: Text("3")),
-                ),
-              ),
-            ),
-          ),
-          StaggeredGridTile.count(
-            crossAxisCellCount: 4,
-            mainAxisCellCount: 2,
-            child: Center(
-              child: Container(
-                padding: const EdgeInsets.all(5),
-                margin: const EdgeInsets.all(5),
-                color: Color.fromRGBO(Random().nextInt(355),
-                    Random().nextInt(355), Random().nextInt(355), 1),
-                child: Card(
-                  color: Color.fromRGBO(Random().nextInt(355),
-                      Random().nextInt(355), Random().nextInt(355), 1),
-                  child: const Center(child: Text("4")),
-                ),
-              ),
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
